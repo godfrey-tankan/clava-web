@@ -3593,3 +3593,27 @@ canvas {
 .footer-menu li a:hover {
   color: #000000;
 }
+#home-image {
+  position: absolute;
+  background-size: cover;
+  z-index: 0;
+  height: 50%;
+  width: 40%;
+  left: 10%;
+}
+#home-image:hover {
+  transform: none;
+}
+#hero {
+  background-color: #025add;
+}
+
+@media (max-width: 767px) {
+  #home-image {
+    display: none;
+  }
+  #hero {
+    background: url(/assets/images/ai.png) center center;
+    background-repeat: no-repeat;
+  }
+}
