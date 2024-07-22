@@ -3622,6 +3622,19 @@ canvas {
 }
 
 @media (max-width: 767px) {
+  .pricing .option ul {
+    text-align: center;
+  }
+
+  .pricing .option ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pricing .option ul li i {
+    margin-right: 10px;
+  }
   #home-image {
     display: none;
   }
