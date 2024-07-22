@@ -3593,6 +3593,19 @@ canvas {
 .footer-menu li a:hover {
   color: #000000;
 }
+.pricing .option ul {
+  text-align: left;
+}
+
+.pricing .option ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pricing .option ul li i {
+  margin-right: 10px;
+}
 #home-image {
   position: absolute;
   background-size: cover;
