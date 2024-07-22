@@ -617,11 +617,10 @@ section {
   }
 }
 
-@media (min-width: 1280px) {
-  .mobile-nav-show,
-  .mobile-nav-hide {
-    display: none;
-  }
+.mobile-nav-show,
+.mobile-nav-hide {
+  display: none;
+  visibility: hidden;
 }
 
 /*--------------------------------------------------------------
@@ -3630,6 +3629,20 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .mobile-nav-show,
+  .mobile-nav-hide {
+    display: block;
+    visibility: visible;
+  }
+  .social a {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    font-size: 20px;
+    padding: 12px;
+  }
+  .social a:hover {
+    background-color: #000000;
   }
 
   .pricing .option ul li i {
