@@ -32,7 +32,7 @@
   --color-start: #3a3a3a;
   --color-end: #3a3a3a;
   --hero-card-bg: rgb(228 227 223 / 17%);
-  --box-shadow-color: rgb(82 90 101 / 10%);
+  --box-shadow-color: rgba(69, 76, 85, 0.1);
 }
 
 :root.dark {
@@ -94,6 +94,12 @@ body.dark {
   width: 45px;
   height: 45px;
   margin-left: 10px;
+}
+#footer form button {
+  display: flex;
+  position: absolute;
+  left: 80%;
+  padding-top: 10px;
 }
 
 a {
@@ -2513,12 +2519,12 @@ ul {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 15px;
   transition: 0.5s;
   -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
   overflow: hidden;
   margin-bottom: 20px;
   border: 0;
@@ -3386,9 +3392,9 @@ canvas {
   --------------------------------------------------------------*/
 
 .footer-section {
-  background: url(../images/hero-bg.png) center left;
+  background: url(../images/mind-read-ai-image-scaled.webp) center left;
   background-size: cover;
-  padding: 60px 0;
+  padding: 10px 0;
   border-radius: 0px;
   position: relative;
   background-attachment: fixed;
