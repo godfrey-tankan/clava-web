@@ -260,7 +260,6 @@
                         color: rgb(255, 255, 255);
                         font-size: 17px;
                         text-transform: capitalize;
-                        background-color: rgb(22, 106, 209);
                         font-weight: bolder;
                       "
                       >Digital Solutions for every Business</span
@@ -271,7 +270,9 @@
                 </div>
                 <div class="footer-social-icon">
                   <span>Follow us</span>
-                  <a href="https://www.facebook.com/clavasoftwares" class="facebook"
+                  <a
+                    href="https://www.facebook.com/clavasoftwares"
+                    class="facebook"
                     ><i class="bx bxl-facebook"></i
                   ></a>
                   <a href="#" class="instagram"
@@ -318,8 +319,7 @@
                 <ul class="list">
                   <li><a href="about.html">About</a></li>
                   <li><a href="packages.html">Pricing</a></li>
-                  <li><a href="porfolio.html">Portfolio</a></li>
-                  <li><a href="faq.html">FAQs</a></li>
+                  <li><a href="#faq">FAQs</a></li>
                   <li><a href="privacy-policy.html">Terms & Conditions</a></li>
                   <li><a href="privacy-policy.html">Privacy Policy</a></li>
                 </ul>
@@ -354,8 +354,18 @@
                 </div>
                 <div class="subscribe-form">
                   <form action="#">
-                    <input type="text" placeholder="Email Address" />
-                    <button><i class="bx bxl-telegram"></i></button>
+                    <input
+                      type="text"
+                      id="newsletter-input"
+                      placeholder="Email Address"
+                    />
+                    <button>
+                      <i
+                        id="news-letter"
+                        onclick="newsLetter(event)"
+                        class="bx bxl-telegram"
+                      ></i>
+                    </button>
                   </form>
                 </div>
               </div>

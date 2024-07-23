@@ -52,6 +52,34 @@ function sendMail(event) {
   );
 }
 
+function newsLetter(event) {
+  event.preventDefault();
+  const newLetterBtn = document.getElementById("news-letter");
+  const newsLetterInput = document.getElementById("newsletter-input");
+
+  newLetterBtn.addEventListener("click", (e) => {
+    console.log("Button clicked");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (newsLetterInput.value.match(emailRegex)) {
+      console.log("Email is valid");
+      newsLetterInput.value = "Subscribed!";
+      newsLetterInput.style.color = "green";
+      setTimeout(() => {
+        newsLetterInput.value = "";
+        newsLetterInput.style.color = "black";
+      }, 3000);
+      return;
+    } else {
+      console.log("Email is invalid");
+      // newsLetterInput.style.border = "4px solid red";
+      // setTimeout(() => {
+      //   newsLetterInput.style.border = "none";
+      //   newsLetterInput.style.color = "black";
+      // }, 1000);
+    }
+  });
+}
+
 function optionSelected(selectElement) {
   // Get the selected option value
   const selectedValue = selectElement.value;

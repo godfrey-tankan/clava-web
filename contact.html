@@ -96,6 +96,18 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "ymKO20M5d5x9a3xby",
+        });
+      })();
+    </script>
+    <script src="assets/javascripts/contact.js"></script>
   </head>
 
   <body>
@@ -169,7 +181,10 @@
       <div class="single-page">
         <!-- Start Contact Section -->
         <div id="contact" class="contact-section section">
-          <div class="section-header"></div>
+          <div class="section-header">
+            <h2>Get in Touch</h2>
+            <p>Have a question or enquiry? Don't hesitate to reach out.</p>
+          </div>
           <div class="container">
             <div class="row">
               <div class="col-lg-4 col-md-12" data-aos="fade-right">
@@ -207,12 +222,7 @@
               <div class="col-lg-8 col-md-12" data-aos="fade-left">
                 <div class="contact-form-box contact-form contact-form-3">
                   <div class="form-container-box">
-                    <form
-                      class="contact-form form"
-                      id="ajax-contact"
-                      method="post"
-                      action="assets/phpscripts/contact.php"
-                    >
+                    <form class="contact-form" id="send-email">
                       <div class="controls">
                         <div class="row">
                           <div class="col-md-6">
@@ -223,8 +233,7 @@
                                 id="name"
                                 name="name"
                                 placeholder="Name*"
-                                required="required"
-                                data-error="Name is required."
+                                required
                               />
                               <div class="help-block with-errors"></div>
                             </div>
@@ -237,8 +246,7 @@
                                 id="email"
                                 name="email"
                                 placeholder="Email*"
-                                required="required"
-                                data-error="Valid email is required."
+                                required
                               />
                               <div class="help-block with-errors"></div>
                             </div>
@@ -249,8 +257,9 @@
                                 type="text"
                                 class="form-control"
                                 name="subject"
+                                id="subject"
                                 placeholder="Subject"
-                                required="required"
+                                required
                               />
                             </div>
                           </div>
@@ -262,31 +271,41 @@
                                 name="message"
                                 rows="7"
                                 placeholder="Write Your Message*"
-                                required="required"
-                                data-error="Please, leave us a message."
+                                required
                               ></textarea>
-                              <div class="help-block with-errors"></div>
                             </div>
                           </div>
                           <div class="col-md-12">
-                            <button type="submit" data-text="Send Message">
-                              Send Message
+                            <button
+                              type="submit"
+                              id="submit-btn"
+                              onclick="sendMail(event)"
+                            >
+                              Send
                             </button>
                           </div>
-                          <div class="messages">
-                            <div
-                              class="alert alert alert-success alert-dismissable alert-dismissable hidden"
-                              id="msgSubmit"
-                            >
-                              <button
-                                type="button"
-                                class="close"
-                                data-dismiss="alert"
-                                aria-hidden="true"
-                              >
-                                &times;
+                          <div class="alert-wrapper" id="alert-success">
+                            <div id="success">
+                              <button class="closeAlert">
+                                <i class="bx bx-x bx-sm" aria-hidden="true"></i>
                               </button>
-                              Thank You! your message has been sent.
+                              <div class="wrapper">
+                                <p>
+                                  Thank you for reaching out to us,we promise to
+                                  respond to your message as soon as possible.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End of .alert_wrapper -->
+                          <div class="alert-wrapper" id="alert-error">
+                            <div id="error">
+                              <button class="closeAlert">
+                                <i class="bx bx-x bx-sm" aria-hidden="true"></i>
+                              </button>
+                              <div class="wrapper">
+                                <p>Sorry! Something Went Wrong.</p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -322,7 +341,6 @@
                         color: rgb(255, 255, 255);
                         font-size: 17px;
                         text-transform: capitalize;
-                        background-color: rgb(22, 106, 209);
                         font-weight: bolder;
                       "
                       >Digital Solutions for every Business</span
@@ -382,7 +400,7 @@
                 <ul class="list">
                   <li><a href="about.html">About</a></li>
                   <li><a href="packages.html">Pricing</a></li>
-                  <li><a href="index.html#faq">FAQs</a></li>
+                  <li><a href="#faq">FAQs</a></li>
                   <li><a href="privacy-policy.html">Terms & Conditions</a></li>
                   <li><a href="privacy-policy.html">Privacy Policy</a></li>
                 </ul>
@@ -417,8 +435,18 @@
                 </div>
                 <div class="subscribe-form">
                   <form action="#">
-                    <input type="text" placeholder="Email Address" />
-                    <button><i class="bx bxl-telegram"></i></button>
+                    <input
+                      type="text"
+                      id="newsletter-input"
+                      placeholder="Email Address"
+                    />
+                    <button>
+                      <i
+                        id="news-letter"
+                        onclick="newsLetter(event)"
+                        class="bx bxl-telegram"
+                      ></i>
+                    </button>
                   </form>
                 </div>
               </div>

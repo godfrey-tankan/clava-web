@@ -470,7 +470,6 @@
                         color: rgb(255, 255, 255);
                         font-size: 17px;
                         text-transform: capitalize;
-                        background-color: rgb(22, 106, 209);
                         font-weight: bolder;
                       "
                       >Digital Solutions for every Business</span
@@ -530,7 +529,7 @@
                 <ul class="list">
                   <li><a href="about.html">About</a></li>
                   <li><a href="packages.html">Pricing</a></li>
-                  <li><a href="index.html#faq">FAQs</a></li>
+                  <li><a href="#faq">FAQs</a></li>
                   <li><a href="privacy-policy.html">Terms & Conditions</a></li>
                   <li><a href="privacy-policy.html">Privacy Policy</a></li>
                 </ul>
@@ -565,8 +564,18 @@
                 </div>
                 <div class="subscribe-form">
                   <form action="#">
-                    <input type="text" placeholder="Email Address" />
-                    <button><i class="bx bxl-telegram"></i></button>
+                    <input
+                      type="text"
+                      id="newsletter-input"
+                      placeholder="Email Address"
+                    />
+                    <button>
+                      <i
+                        id="news-letter"
+                        onclick="newsLetter(event)"
+                        class="bx bxl-telegram"
+                      ></i>
+                    </button>
                   </form>
                 </div>
               </div>
