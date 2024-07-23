@@ -41,13 +41,13 @@
   --hero-overlay-color: #000000;
   --menu-color: #ffffff;
   --theme-color: #000000;
-  --border-color: #14929a;
+  --border-color: #ffffff;
   --theme-color-dark: #2c2c2c;
   --text-color: #ffffff;
   --hero-text-color: #ffffff;
   --text-white-color: #ffffff;
   --text-grey-color: #565656;
-  --text-theme-color: #14929a;
+  --text-theme-color: #ffffff;
   --light-color: #000000;
   --color-default: #000000;
   --color-primary: #000000;
@@ -55,7 +55,7 @@
   --color-start: #000000;
   --color-end: #000000;
   --hero-card-bg: rgb(0 0 0 / 83%);
-  --box-shadow-color: rgb(20 146 154 / 49%);
+  --box-shadow-color: rgba(255, 255, 255, 0.49);
 }
 
 body {
@@ -70,19 +70,19 @@ body.dark {
   --color-bg: #000000;
   --hero-overlay-color: #000000;
   --menu-color: #ffffff;
-  --border-color: #025add;
+  --border-color: #ffffff;
   --theme-color-dark: #151515;
   --text-color: #ffffff;
   --text-white-color: #ffffff;
   --text-grey-color: #565656;
-  --text-theme-color: #025add;
+  --text-theme-color: #ffffff;
   --light-color: #000000;
   --color-default: #000000;
-  --color-secondary: #0c6de0;
+  --color-secondary: #09628b;
   --color-start: #000000;
   --color-end: #000000;
   --hero-card-bg: rgb(0 0 0 / 83%);
-  --box-shadow-color: rgb(12 109 224 / 69%);
+  --box-shadow-color: rgba(55, 55, 55, 0.69);
 }
 
 #darkmode-button {
@@ -1435,7 +1435,9 @@ section {
 
 .faq .accordion-body {
   padding: 40px;
+  font-family: "Nunito", sans-serif;
   border: 0;
+  font-size: 18px;
   border-radius: 0 0 8px 8px;
   background: var(--theme-color-dark);
   box-shadow: none;
