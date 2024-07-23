@@ -17,6 +17,13 @@
     />
     <meta name="author" content="clava software solutions" />
     <meta name="robots" content="index, follow" />
+    <meta name="copyright" content="clava software solutions" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+
+    <meta name="msapplication-navbutton-color" content="#061948" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#061948" />
     <meta
       name="googlebot"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
@@ -103,6 +110,18 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "ymKO20M5d5x9a3xby",
+        });
+      })();
+    </script>
+    <script src="assets/javascripts/contact.js"></script>
   </head>
 
   <body>
@@ -841,58 +860,6 @@
         </div>
       </section>
 
-      <!-- End Testimonials Section -->
-
-      <!--  Start Counter Section  -->
-      <!-- <div
-        id="stats-counter"
-        class="call-to-action stats-counter section"
-        style="
-          background-image: url('assets/images/mind-read-ai-image-scaled.webp');
-        "
-      >
-        <div class="container" data-aos="fade-up">
-          <div class="row gy-4 align-items-center">
-            <div class="col-lg-4">
-              <div class="stats-item d-flex flex-column align-items-center">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="232"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p><span>Happy Clients</span> consequuntur quae diredo</p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="stats-item d-flex flex-column align-items-center">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="521"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p><span>Completed Projects</span> adipisci atque quia aut</p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="stats-item d-flex flex-column align-items-center">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="453"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p><span>Hours Of Support</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!--  End Counter Section  -->
-
-      <!--  Clients Section  -->
-      <!--  Frequently Asked Questions Section  -->
       <section id="faq" class="faq">
         <div class="container" data-aos="fade-up">
           <div class="section-header">
@@ -1113,12 +1080,7 @@
             <div class="col-lg-8 col-md-12" data-aos="fade-left">
               <div class="contact-form-box contact-form contact-form-3">
                 <div class="form-container-box">
-                  <form
-                    class="contact-form form"
-                    id="ajax-contact"
-                    method="post"
-                    action="assets/phpscripts/contact.php"
-                  >
+                  <form class="contact-form" id="send-email">
                     <div class="controls">
                       <div class="row">
                         <div class="col-md-6">
@@ -1155,6 +1117,7 @@
                               type="text"
                               class="form-control"
                               name="subject"
+                              id="subject"
                               placeholder="Subject"
                               required="required"
                             />
@@ -1171,28 +1134,36 @@
                               required="required"
                               data-error="Please, leave us a message."
                             ></textarea>
-                            <div class="help-block with-errors"></div>
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <button type="submit" data-text="Send Message">
-                            Send Message
+                          <button
+                            type="submit"
+                            id="submit-btn"
+                            onclick="sendMail(event)"
+                          >
+                            Send
                           </button>
                         </div>
-                        <div class="messages">
-                          <div
-                            class="alert alert alert-success alert-dismissable alert-dismissable hidden"
-                            id="msgSubmit"
-                          >
-                            <button
-                              type="button"
-                              class="close"
-                              data-dismiss="alert"
-                              aria-hidden="true"
-                            >
-                              &times;
+                        <div class="alert-wrapper" id="alert-success">
+                          <div id="success">
+                            <button class="closeAlert">
+                              <i class="bx bx-x bx-sm" aria-hidden="true"></i>
                             </button>
-                            Thank You! your message has been sent.
+                            <div class="wrapper">
+                              <p>Your message was sent successfully.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of .alert_wrapper -->
+                        <div class="alert-wrapper" id="alert-error">
+                          <div id="error">
+                            <button class="closeAlert">
+                              <i class="bx bx-x bx-sm" aria-hidden="true"></i>
+                            </button>
+                            <div class="wrapper">
+                              <p>Sorry! Something Went Wrong.</p>
+                            </div>
                           </div>
                         </div>
                       </div>
