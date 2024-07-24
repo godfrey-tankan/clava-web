@@ -96,6 +96,18 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "ymKO20M5d5x9a3xby",
+        });
+      })();
+    </script>
+    <script src="assets/javascripts/contact.js"></script>
   </head>
 
   <body>
@@ -179,53 +191,35 @@
                 <div class="col-lg-4">
                   <div class="card text-center">
                     <div class="title">
-                      <h2>Basic</h2>
+                      <h2 class="service-name">Basic</h2>
                     </div>
                     <div class="price">
-                      <h4><sup>$</sup>150</h4>
+                      <h4 class="service-amount"><sup>$</sup>150</h4>
                     </div>
                     <div class="option">
                       <ul>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Basic website design
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Up to 5 pages
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Free SSL certificate
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Mobile responsive
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Basic SEO optimization
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           1 year hosting included
                         </li>
                         <li>
@@ -244,17 +238,17 @@
                           <i class="bx bx-x bx-sm" style="color: #bf280a"></i>
                           24/7 support
                         </li>
-
+  
                         <li>
                           <i class="bx bx-x bx-sm" style="color: #bf280a"></i>
                           Advanced Data security
                         </li>
                       </ul>
                     </div>
-                    <a href="#">Order Now</a>
+                    <a onclick="showPopup('web dev Basic', '$150')">Order Now</a>
                   </div>
                 </div>
-
+  
                 <div
                   class="col-lg-4"
                   style="transform: matrix(1.1, 0, 0, 1.1, 0, 0)"
@@ -269,67 +263,40 @@
                     <div class="option">
                       <ul>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Custom website design
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Up to 10 pages
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Mobile responsive
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Upto 10 Custom emails
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Free business Profile
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Social media integration
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           SSL certificate
                         </li>
-
+  
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Advanced SEO optimization
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           2 years hosting included
                         </li>
                         <li>
@@ -342,10 +309,13 @@
                         </li>
                       </ul>
                     </div>
-                    <a href="#">Order Now</a>
+                    serviceName
+                    <a onclick="showPopup('web dev standard','$300')"
+                      >Order Now</a
+                    >
                   </div>
                 </div>
-
+  
                 <div class="col-lg-4">
                   <div class="card text-center">
                     <div class="title">
@@ -357,89 +327,144 @@
                     <div class="option">
                       <ul>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Custom Designs
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Unlimited pages
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Mobile responsive
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Comprehensive SEO optimization
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Upto 30 custom emails
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Business Profile
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Social media integration
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           24/7 support
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           SSL certificate
                         </li>
-
+  
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           Advanced Data security
                         </li>
                         <li>
-                          <i
-                            class="bx bx-check bx-sm"
-                            style="color: #0abf55"
-                          ></i>
+                          <i class="bx bx-check bx-sm" style="color: #0abf55"></i>
                           3 years hosting included
                         </li>
                       </ul>
                     </div>
-                    <a href="#">Order Now</a>
+                    <a onclick="showPopup('web dev premium','$500')">Order Now</a>
                   </div>
                 </div>
+  
+                <a href="packages.html">
+                  <button
+                    style="
+                      background-color: transparent;
+                      color: rgb(98, 96, 96);
+                      border: none;
+                      padding: 3px;
+                    "
+                  >
+                    View all
+                    <i class="bx bx-right-arrow bx-fade-right-hover"></i>
+                  </button>
+                </a>
               </div>
+            </div>
+          </div>
+          <div id="popup" class="service-form-popup" style="display: none">
+            <div class="service-form-popup-content">
+              <span id="close-button" class="close-button" onclick="hidePopup()"
+                >&times;</span
+              >
+              <div id="service-form-popup-response"></div>
+              <span class="service-form-popup-title"
+                >Service Name:
+                <span id="service-form-popup-service-name"
+                  >Service Name</span
+                ></span
+              >
+              <br />
+              <span class="service-form-popup-title"
+                >Service Amount:
+                <span id="service-form-popup-service-amount">
+                  Service Amount
+                </span></span
+              >
+              <br />
+              <br />
+              <form id="service-form-popup-form">
+                <input type="text" name="service_name" id="service_name" hidden />
+                <input
+                  type="text"
+                  name="service_amount"
+                  id="service_amount"
+                  hidden
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  value="Package Order"
+                  hidden
+                />
+                <div class="form-group">
+                  <label for="service-form-popup-email">Email:</label>
+                  <input
+                    type="email"
+                    id="service-form-popup-email"
+                    name="email"
+                    class="service-form-popup-field"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="service-form-popup-phone">Phone:</label>
+                  <input
+                    type="tel"
+                    id="service-form-popup-phone"
+                    name="phone"
+                    class="service-form-popup-field"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="service-form-popup-date"
+                    >Date Service Needed:</label
+                  >
+                  <input
+                    type="date"
+                    id="service-form-popup-date"
+                    name="service-date"
+                    class="service-form-popup-field"
+                    required
+                  />
+                </div>
+                <button type="submit" class="service-form-popup-button">
+                  Submit Order
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -517,7 +542,7 @@
                         </li>
                       </ul>
                     </div>
-                    <a href="#">Order Now</a>
+                    <a onclick="showPopup('MobileApp dev Basic', '$300')">Order Now</a>
                   </div>
                 </div>
 
@@ -595,7 +620,7 @@
                         </li>
                       </ul>
                     </div>
-                    <a href="#">Order Now</a>
+                    <a onclick="showPopup('MobileApp dev Standard', '$500')" >Order Now</a>
                   </div>
                 </div>
 
@@ -681,9 +706,83 @@
                         </li>
                       </ul>
                     </div>
-                    <a href="#">Order Now</a>
+                    <a onclick="showPopup('MobileApp dev Premium', '$1000')">Order Now</a>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div id="popup" class="service-form-popup" style="display: none">
+              <div class="service-form-popup-content">
+                <span id="close-button" class="close-button" onclick="hidePopup()"
+                  >&times;</span
+                >
+                <div id="service-form-popup-response"></div>
+                <span class="service-form-popup-title"
+                  >Service Name:
+                  <span id="service-form-popup-service-name"
+                    >Service Name</span
+                  ></span
+                >
+                <br />
+                <span class="service-form-popup-title"
+                  >Service Amount:
+                  <span id="service-form-popup-service-amount">
+                    Service Amount
+                  </span></span
+                >
+                <br />
+                <br />
+                <form id="service-form-popup-form">
+                  <input type="text" name="service_name" id="service_name" hidden />
+                  <input
+                    type="text"
+                    name="service_amount"
+                    id="service_amount"
+                    hidden
+                  />
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    value="Package Order"
+                    hidden
+                  />
+                  <div class="form-group">
+                    <label for="service-form-popup-email">Email:</label>
+                    <input
+                      type="email"
+                      id="service-form-popup-email"
+                      name="email"
+                      class="service-form-popup-field"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="service-form-popup-phone">Phone:</label>
+                    <input
+                      type="tel"
+                      id="service-form-popup-phone"
+                      name="phone"
+                      class="service-form-popup-field"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="service-form-popup-date"
+                      >Date Service Needed:</label
+                    >
+                    <input
+                      type="date"
+                      id="service-form-popup-date"
+                      name="service-date"
+                      class="service-form-popup-field"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="service-form-popup-button">
+                    Submit Order
+                  </button>
+                </form>
               </div>
             </div>
           </div>
@@ -769,7 +868,7 @@
                         </li>
                       </ul>
                     </div>
-                    <a href="#">Order Now</a>
+                    <a onclick="showPopup('Chatbot dev Basic', '$100')">Order Now</a>
                   </div>
                 </div>
                 <div class="col-lg-4"
@@ -852,7 +951,7 @@
                         </li>
                       </ul>
                     </div>
-                    <a href="#">Order Now</a>
+                    <a onclick="showPopup('Chatbot dev Standard', '$150')">Order Now</a>
                   </div>
                 </div>
 
@@ -938,9 +1037,83 @@
                         </li>
                       </ul>
                     </div>
-                    <a href="#">Order Now</a>
+                    <a onclick="showPopup('Chatbot dev Premium', '$500')">Order Now</a>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div id="popup" class="service-form-popup" style="display: none">
+              <div class="service-form-popup-content">
+                <span id="close-button" class="close-button" onclick="hidePopup()"
+                  >&times;</span
+                >
+                <div id="service-form-popup-response"></div>
+                <span class="service-form-popup-title"
+                  >Service Name:
+                  <span id="service-form-popup-service-name"
+                    >Service Name</span
+                  ></span
+                >
+                <br />
+                <span class="service-form-popup-title"
+                  >Service Amount:
+                  <span id="service-form-popup-service-amount">
+                    Service Amount
+                  </span></span
+                >
+                <br />
+                <br />
+                <form id="service-form-popup-form">
+                  <input type="text" name="service_name" id="service_name" hidden />
+                  <input
+                    type="text"
+                    name="service_amount"
+                    id="service_amount"
+                    hidden
+                  />
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    value="Package Order"
+                    hidden
+                  />
+                  <div class="form-group">
+                    <label for="service-form-popup-email">Email:</label>
+                    <input
+                      type="email"
+                      id="service-form-popup-email"
+                      name="email"
+                      class="service-form-popup-field"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="service-form-popup-phone">Phone:</label>
+                    <input
+                      type="tel"
+                      id="service-form-popup-phone"
+                      name="phone"
+                      class="service-form-popup-field"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="service-form-popup-date"
+                      >Date Service Needed:</label
+                    >
+                    <input
+                      type="date"
+                      id="service-form-popup-date"
+                      name="service-date"
+                      class="service-form-popup-field"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="service-form-popup-button">
+                    Submit Order
+                  </button>
+                </form>
               </div>
             </div>
           </div>

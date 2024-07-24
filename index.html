@@ -573,10 +573,10 @@
               <div class="col-lg-4">
                 <div class="card text-center">
                   <div class="title">
-                    <h2>Basic</h2>
+                    <h2 class="service-name">Basic</h2>
                   </div>
                   <div class="price">
-                    <h4><sup>$</sup>150</h4>
+                    <h4 class="service-amount"><sup>$</sup>150</h4>
                   </div>
                   <div class="option">
                     <ul>
@@ -627,7 +627,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#">Order Now</a>
+                  <a onclick="showPopup('web dev Basic', '$150')">Order Now</a>
                 </div>
               </div>
 
@@ -691,7 +691,10 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#">Order Now</a>
+                  serviceName
+                  <a onclick="showPopup('web dev standard','$300')"
+                    >Order Now</a
+                  >
                 </div>
               </div>
 
@@ -752,7 +755,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#">Order Now</a>
+                  <a onclick="showPopup('web dev premium','$500')">Order Now</a>
                 </div>
               </div>
 
@@ -770,6 +773,80 @@
                 </button>
               </a>
             </div>
+          </div>
+        </div>
+        <div id="popup" class="service-form-popup" style="display: none">
+          <div class="service-form-popup-content">
+            <span id="close-button" class="close-button" onclick="hidePopup()"
+              >&times;</span
+            >
+            <div id="service-form-popup-response"></div>
+            <span class="service-form-popup-title"
+              >Service Name:
+              <span id="service-form-popup-service-name"
+                >Service Name</span
+              ></span
+            >
+            <br />
+            <span class="service-form-popup-title"
+              >Service Amount:
+              <span id="service-form-popup-service-amount">
+                Service Amount
+              </span></span
+            >
+            <br />
+            <br />
+            <form id="service-form-popup-form">
+              <input type="text" name="service_name" id="service_name" hidden />
+              <input
+                type="text"
+                name="service_amount"
+                id="service_amount"
+                hidden
+              />
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                value="Package Order"
+                hidden
+              />
+              <div class="form-group">
+                <label for="service-form-popup-email">Email:</label>
+                <input
+                  type="email"
+                  id="service-form-popup-email"
+                  name="email"
+                  class="service-form-popup-field"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="service-form-popup-phone">Phone:</label>
+                <input
+                  type="tel"
+                  id="service-form-popup-phone"
+                  name="phone"
+                  class="service-form-popup-field"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="service-form-popup-date"
+                  >Date Service Needed:</label
+                >
+                <input
+                  type="date"
+                  id="service-form-popup-date"
+                  name="service-date"
+                  class="service-form-popup-field"
+                  required
+                />
+              </div>
+              <button type="submit" class="service-form-popup-button">
+                Submit Order
+              </button>
+            </form>
           </div>
         </div>
       </div>
