@@ -2791,6 +2791,7 @@ canvas {
   .service-form-popup-content {
     background-color: #fefefe;
     padding: 20px;
+    margin: 50% auto;
     border: 1px solid #888;
     width: 96%;
   }
@@ -2803,16 +2804,5 @@ canvas {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
-
-  .service-form-popup-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
   }
 }
