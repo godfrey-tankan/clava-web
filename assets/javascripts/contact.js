@@ -139,16 +139,6 @@ function handleFormSubmit(event, serviceName, serviceAmount, formResponse) {
       formResponse.style.color = "red";
       return;
     }
-    formResponse.textContent =
-      "Order submitted successfully, we will get back to you soon!";
-    formResponse.style.color = "green";
-    formResponse.style.display = "block";
-    setTimeout(() => {
-      formResponse.style.display = "none";
-      document.getElementById("popup").style.display = "none";
-      form.reset();
-    }, 4000);
-
     form.querySelector("#service_name").value = serviceName;
     form.querySelector("#service_amount").value = serviceAmount;
     emailjs.sendForm("service_7rfvwkn", "template_92w3oc8", form).then(
